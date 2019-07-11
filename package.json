@@ -1,0 +1,47 @@
+{
+  "name": "pipe-compose",
+  "version": "1.0.0",
+  "description": "ES6 pipe and compose in JavScript",
+  "homepage": "https://github.com/ktalebian/pipe-compose#readme",
+  "bugs": {
+    "url": "https://github.com/ktalebian/pipe-compose/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktalebian/pipe-compose.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "tsc",
+    "coverage": "codecov",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "codecov": "^3.5.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
