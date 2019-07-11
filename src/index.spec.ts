@@ -26,4 +26,9 @@ describe('index', () => {
             expect(compose('sample-argument', uppercase, reverse, get3Chars)).toEqual('MAS');
         });
     });
+
+    it('pipe and compose', () => {
+        expect(compose('sample-argument', uppercase, get3Chars, reverse))
+            .toEqual(pipe('sample-argument', reverse, get3Chars, uppercase));
+    });
 });
