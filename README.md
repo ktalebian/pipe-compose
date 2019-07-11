@@ -1,6 +1,6 @@
 # pipe-compose
 
-ES6 pipe and compose in JavScript. Inspired by [this Mediu post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).
+ES6 pipe and compose in JavScript. Inspired by [this Medium post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).
 
 ## What is it?
 
