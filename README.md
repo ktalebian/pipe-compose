@@ -1,10 +1,10 @@
 # pipe-compose
 
-ES6 pipe and compose in JavScript. Inspired by [this Mediu post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).
+ES6 pipe and compose in JavScript. Inspired by [this Medium post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).
 
 ## What is it?
 
-To paraphrase the Medium post, image you want to pipe the out of n-functions together. You'll endup with something like:
+To paraphrase the Medium post, image you want to pipe the output of n-functions together. You'll endup with something like:
 
 ```js
 reverse(get3Chars(uppercase('the-argument')));
@@ -22,10 +22,10 @@ pipe('the-argument', uppercase, get3Chars, reverse);
 It helps to read this similar to bash's pipe `|`:
 
 ```bash
-echo 'the-argument | uppercase | get3Chars | reverse;
+echo 'the-argument' | uppercase | get3Chars | reverse;
 ```
 
-`compose` is the exact same thing as `pipe`, but in reverse direction. For example these two would return the same result.
+`compose` is the reverse of `pipe`. For example these two would return the same result.
 
 ```js
 pipe('the-argument', uppercase, get3Chars, reverse);
@@ -45,7 +45,7 @@ npm install pipe-compose
 and use it normally:
 
 ```js
-import { pipe, compose } from 'pipe-compose';
+import { pipe, compose } from '@k88/pipe-compose';
 ```
 
 ### Get the source code
