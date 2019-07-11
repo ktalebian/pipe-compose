@@ -8,7 +8,7 @@ script:
   - npm run test
   - npm run build
 after_success:
-  - codecov
+  - codecov --token="$CODECOV_TOKEN"
 cache: npm
 deploy:
   provider: npm
