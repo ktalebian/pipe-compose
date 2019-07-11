@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+before_script:
+  - npm install
+script:
+  - npm run lint
+  - npm run test
+  - npm run build
+after_success:
+  - codecov
+cache: npm
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
+  on:
+    tags: true
+    repo: ktalebian/switch
