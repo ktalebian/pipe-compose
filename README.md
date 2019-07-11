@@ -45,7 +45,7 @@ npm install pipe-compose
 and use it normally:
 
 ```js
-import { pipe, compose } from 'pipe-compose';
+import { pipe, compose } from '@k88/pipe-compose';
 ```
 
 ### Get the source code
