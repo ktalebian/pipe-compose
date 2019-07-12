@@ -1,5 +1,5 @@
 <h1 align="center">@k88/pipe-compose</h1>
-<p align="center">ES6 pipe and compose in JavScript, inspired by <a href="https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a" target="_blank">this Medium post</a></p>
+<p align="center">ES6 like pipe and compose in JavScript, inspired by <a href="https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a" target="_blank">this Medium post</a>.</p>
 
 <p align="center">
     <a href="https://travis-ci.com/ktalebian/pipe-compose">
@@ -42,7 +42,7 @@ It helps to read this similar to bash's pipe `|`:
 echo 'the-argument' | uppercase | get3Chars | reverse;
 ```
 
-`compose` is the reverse of `pipe`. For example these two would return the same result.
+`compose` is the reverse of `pipe`. For example these two would return the same result:
 
 ```js
 pipe('the-argument', uppercase, get3Chars, reverse);
@@ -56,10 +56,10 @@ compose('the-argument', reverse, get3Chars, uppercase);
 Install from npm:
 
 ```bash
-npm install pipe-compose
+npm install @k88/pipe-compose
 ```
 
-and use it normally:
+and use it:
 
 ```js
 import { pipe, compose } from '@k88/pipe-compose';
@@ -67,7 +67,7 @@ import { pipe, compose } from '@k88/pipe-compose';
 
 ### Get the source code
 
-`pipe` and `compose` are each one-liner, so you can just copy/paste them into your application:
+`pipe` and `compose` are each one-liner, so you can also just copy/paste them into your application:
 
 ```js
 const pipe = (x, ...fns) => fns.reduce((v, f) => f(v), x);
