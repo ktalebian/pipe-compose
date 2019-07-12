@@ -1,5 +1,5 @@
 <h1 align="center">@k88/pipe-compose</h1>
-<p align="center">ES6 like pipe and compose in JavScript, inspired by <a href="https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a" target="_blank">this Medium post</a>.</p>
+<p align="center">ES6 like pipe and compose in JavaScript, inspired by <a href="https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a" target="_blank">this Medium post</a>.</p>
 
 <p align="center">
     <a href="https://travis-ci.com/ktalebian/pipe-compose">
@@ -13,6 +13,9 @@
     </a>
     <a href="https://www.npmjs.com/package/@k88/pipe-compose">
         <img src="https://img.shields.io/npm/dt/@k88/pipe-compose.svg?style=square" title="npm" />
+    </a>
+    <a href="https://www.npmjs.com/package/@k88/pipe-compose?activeTab=dependents">
+        <img src="https://badgen.net/npm/dependents/@k88/pipe-compose" title="Number of Dependencies" />
     </a>
     <a href="./LICENSE">
         <img src="https://img.shields.io/npm/l/@k88/pipe-compose.svg?style=square" title="License" />
