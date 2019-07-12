@@ -7,13 +7,12 @@ script:
   - npm run lint
   - npm run test
   - npm run build
-after_success:
-  - codecov
 cache: npm
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
+  skip_cleanup: true
   on:
     tags: true
     repo: ktalebian/pipe-compose
