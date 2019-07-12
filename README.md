@@ -1,6 +1,23 @@
-# pipe-compose
+<h1 align="center">@k88/pipe-compose</h1>
+<p align="center">ES6 pipe and compose in JavScript, inspired by [this Medium post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).</p>
 
-ES6 pipe and compose in JavScript. Inspired by [this Medium post](https://medium.com/@dtipson/creating-an-es6ish-compose-in-javascript-ac580b95104a).
+<p align="center">
+    <a href="https://travis-ci.com/ktalebian/pipe-compose">
+        <img src="https://travis-ci.com/ktalebian/pipe-compose.svg?branch=master" title="Build Status" />
+    </a>
+    <a href="https://codecov.io/gh/ktalebian/switch">
+        <img src="https://codecov.io/gh/ktalebian/pipe-compose/branch/master/graph/badge.svg" title="Code Coverage" />
+    </a>
+    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+        <img src="https://img.shields.io/npm/v/@k88/pipe-compose.svg?style=square" title="npm" />
+    </a>
+    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+        <img src="https://img.shields.io/npm/dt/@k88/pipe-compose.svg?style=square" title="npm" />
+    </a>
+    <a href="./LICENSE">
+        <img src="https://img.shields.io/npm/l/@ktalebian/pipe-compose.svg?style=square" title="License" />
+    </a>
+</p>
 
 ## What is it?
 
