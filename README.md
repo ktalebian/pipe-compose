@@ -56,7 +56,7 @@ compose('the-argument', reverse, get3Chars, uppercase);
 Install from npm:
 
 ```bash
-npm install pipe-compose
+npm install @k88/pipe-compose
 ```
 
 and use it:
