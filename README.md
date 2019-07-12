@@ -14,6 +14,9 @@
     <a href="https://www.npmjs.com/package/@k88/pipe-compose">
         <img src="https://img.shields.io/npm/dt/@k88/pipe-compose.svg?style=square" title="npm" />
     </a>
+    <a href="https://www.npmjs.com/package/@k88/pipe-compose?activeTab=dependents">
+        <img src="https://badgen.net/npm/dependents/@k88/pipe-compose" title="Number of Dependencies" />
+    </a>
     <a href="./LICENSE">
         <img src="https://img.shields.io/npm/l/@k88/pipe-compose.svg?style=square" title="License" />
     </a>
