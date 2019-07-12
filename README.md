@@ -5,17 +5,17 @@
     <a href="https://travis-ci.com/ktalebian/pipe-compose">
         <img src="https://travis-ci.com/ktalebian/pipe-compose.svg?branch=master" title="Build Status" />
     </a>
-    <a href="https://codecov.io/gh/ktalebian/switch">
+    <a href="https://codecov.io/gh/ktalebian/pipe-compose">
         <img src="https://codecov.io/gh/ktalebian/pipe-compose/branch/master/graph/badge.svg" title="Code Coverage" />
     </a>
-    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+    <a href="https://www.npmjs.com/package/@k88/pipe-compose">
         <img src="https://img.shields.io/npm/v/@k88/pipe-compose.svg?style=square" title="npm" />
     </a>
-    <a href="https://www.npmjs.com/package/@ktalebian/switch">
+    <a href="https://www.npmjs.com/package/@k88/pipe-compose">
         <img src="https://img.shields.io/npm/dt/@k88/pipe-compose.svg?style=square" title="npm" />
     </a>
     <a href="./LICENSE">
-        <img src="https://img.shields.io/npm/l/@ktalebian/pipe-compose.svg?style=square" title="License" />
+        <img src="https://img.shields.io/npm/l/@k88/pipe-compose.svg?style=square" title="License" />
     </a>
 </p>
 
