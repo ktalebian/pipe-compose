@@ -1,13 +1,13 @@
-import { compose, pCompose, pipe, pPipe } from './index';
+import { cCompose, compose, cPipe, pCompose, pipe, pPipe } from './index';
 
 describe('index', () => {
     const uppercase = (str: string) => str.toUpperCase();
     const reverse = (str: string) => str.split('').reverse().join('');
     const get3Chars = (str: string) => str.substring(0, 3);
 
-    const add1 = async (current) => current + 1;
-    const divide3 = async (current) => current / 3;
-    const multiply2 = async (current) => current * 2;
+    const add1 = async (current: number) => current + 1;
+    const divide3 = async (current: number) => current / 3;
+    const multiply2 = async (current: number) => current * 2;
 
     describe('pipe', () => {
         it('should return result without any functions', () => {
@@ -28,6 +28,28 @@ describe('index', () => {
         it('should compose', () => {
             expect(compose('sample-argument', uppercase, get3Chars, reverse)).toEqual('TNE');
             expect(compose('sample-argument', uppercase, reverse, get3Chars)).toEqual('MAS');
+        });
+    });
+
+    describe('cPipe', () => {
+        it('should return result without any functions', () => {
+            expect(cPipe()('sample-argument')).toEqual('sample-argument');
+        });
+
+        it('should pipe', () => {
+            expect(cPipe(uppercase, get3Chars, reverse)('sample-argument')).toEqual('MAS');
+            expect(cPipe(uppercase, reverse, get3Chars)('sample-argument')).toEqual('TNE');
+        });
+    });
+
+    describe('cCompose', () => {
+        it('should return result without any functions', () => {
+            expect(cCompose()('sample-argument')).toEqual('sample-argument');
+        });
+
+        it('should compose', () => {
+            expect(cCompose(uppercase, get3Chars, reverse)('sample-argument')).toEqual('TNE');
+            expect(cCompose(uppercase, reverse, get3Chars)('sample-argument')).toEqual('MAS');
         });
     });
 

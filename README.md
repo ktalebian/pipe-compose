@@ -24,9 +24,11 @@
 
 ## What is it?
 
+This library exports 6 functions: `pipe`, `compose`, `cPipe`, `cCompose`, `pPipe`, and `pCompose`.
+
 ### Pipe and Compose
 
-To paraphrase the Medium post, image you want to pipe the output of n-functions together. You'll endup with something like:
+To paraphrase the Medium post, image you want to pipe the output of n-functions together. You'll end up with something like:
 
 ```js
 reverse(get3Chars(uppercase('the-argument')));
@@ -54,9 +56,23 @@ pipe('the-argument', uppercase, get3Chars, reverse);
 compose('the-argument', reverse, get3Chars, uppercase);
 ```
 
+### cPipe and cCompose
+
+These are composable versions of `pipe` and `compose`, i.e.:
+
+```
+const textModifier = cPipe(uppercase, get3Chars, reverse);
+
+textModifier('the-argument');
+// EHT
+
+textModifier('another-argument');
+// ONA
+```
+
 ### pPipe and pCompose
 
-There are also composible promise version of the pipe and compose.
+There are also composable promise version of the pipe and compose.
 
 ```js
 const calc = pPipe(add1, multiply2, divide3);
@@ -64,7 +80,7 @@ await calc(2);
 // 2
 ```
 
-In this example, we are creating a calculation function that takes in an number, and performs basic math operation on it. In this case, we are passing `2` and first adding 1 to it (giving us 3), then multipluing by 2 (giving us 6) and finally dividing by 3 (giving us back 2).
+In this example, we are creating a calculation function that takes in an number, and performs basic math operation on it. In this case, we are passing `2` and first adding 1 to it (giving us 3), then multiplying by 2 (giving us 6) and finally dividing by 3 (giving us back 2).
 
 As before, `pCompose` would work in the reverse:
 
@@ -92,11 +108,15 @@ import { pipe, compose } from '@k88/pipe-compose';
 
 ### Get the source code
 
-All of these auxilary functions are one-liner,  so you can also just copy/paste them into your application:
+All of these auxiliary functions are one-liner,  so you can also just copy/paste them into your application:
 
 ```js
 const pipe = (x, ...fns) => fns.reduce((v, f) => f(v), x);
 const compose = (x, ...fns) => fns.reduceRight((v, f) => f(v), x);
+
+const cPipe = (...fns) => (x) => => fns.reduce((v, f) => f(v), x);
+const cCompose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
+
 const pPipe =  (...fns) => async (x) => fns.reduce(async (v, f) => f(await v), x);
 const pCompose = (...fns) => async (x) => fns.reduceRight(async (v, f) => f(await v), x);
 ```
