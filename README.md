@@ -60,7 +60,7 @@ compose('the-argument', reverse, get3Chars, uppercase);
 
 These are composable versions of `pipe` and `compose`, i.e.:
 
-```
+```js
 const textModifier = cPipe(uppercase, get3Chars, reverse);
 
 textModifier('the-argument');
