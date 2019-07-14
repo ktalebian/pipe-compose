@@ -21,8 +21,8 @@
     "prebuild": "rm -rf build",
     "build": "tsc",
     "coverage": "codecov",
-    "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --project tsconfig.json --fix",
+    "lint": "tslint --project tsconfig.lint.json",
+    "lint:fix": "tslint --project tsconfig.lint.json --fix",
     "test": "jest",
     "test:watch": "jest --watch"
   },

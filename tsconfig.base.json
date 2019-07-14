@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "build",
+    "sourceMap": true,
+    "declaration": true,
+    "strict": false,
+    "removeComments": true,
+  }
+}
