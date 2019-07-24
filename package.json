@@ -11,7 +11,7 @@
     "url": "git+https://github.com/ktalebian/pipe-compose.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "Kousha Talebian <k@ousha.me>",
   "files": [
     "build"
   ],
@@ -43,5 +43,6 @@
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
-  }
+  },
+  "reveal": true
 }
