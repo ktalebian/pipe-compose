@@ -60,7 +60,7 @@ compose('the-argument', reverse, get3Chars, uppercase);
 
 These are composable versions of `pipe` and `compose`, i.e.:
 
-```
+```js
 const textModifier = cPipe(uppercase, get3Chars, reverse);
 
 textModifier('the-argument');
@@ -117,6 +117,6 @@ const compose = (x, ...fns) => fns.reduceRight((v, f) => f(v), x);
 const cPipe = (...fns) => (x) => => fns.reduce((v, f) => f(v), x);
 const cCompose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
 
-const pPipe =  (...fns) => async (x) => fns.reduce(async (v, f) => f(await v), x);
+const pPipe = (...fns) => async (x) => fns.reduce(async (v, f) => f(await v), x);
 const pCompose = (...fns) => async (x) => fns.reduceRight(async (v, f) => f(await v), x);
 ```
