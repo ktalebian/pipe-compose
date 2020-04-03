@@ -21,8 +21,8 @@
     "prebuild": "rm -rf build",
     "build": "tsc",
     "coverage": "codecov",
-    "lint": "tslint --project tsconfig.lint.json",
-    "lint:fix": "tslint --project tsconfig.lint.json --fix",
+    "lint": "eslint --ext ts src/",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -34,15 +34,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.2",
-    "codecov": "^3.5.0",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "@types/jest": "^25.1.5",
+    "@types/node": "^13.11.0",
+    "codecov": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-twilio-ts": "^1.22.0",
+    "husky": "^4.2.3",
+    "jest": "^25.2.7",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
   },
   "reveal": true
 }
