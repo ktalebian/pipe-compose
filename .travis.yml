@@ -11,7 +11,7 @@ after_success:
   - npm run coverage -- --token="$CODECOV_TOKEN"
 cache: npm
 deploy:
-  provider: releases
+  provider: npm
   email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
   skip_cleanup: true
