@@ -1,6 +1,7 @@
 import { cCompose, compose, cPipe, pCompose, pipe, pPipe } from '.';
 
 describe('index', () => {
+  const sampleArgument = 'sample-argument';
   const uppercase = (str: string) => str.toUpperCase();
   const reverse = (str: string) => str.split('').reverse().join('');
   const get3Chars = (str: string) => str.substring(0, 3);
@@ -10,51 +11,51 @@ describe('index', () => {
   const multiply2 = async (current: number) => current * 2;
 
   describe('pipe', () => {
-    it('should return result without any functions', () => {
-      expect(pipe('sample-argument')).toEqual('sample-argument');
+    it('pipe should return result without any functions', () => {
+      expect(pipe(sampleArgument)).toEqual(sampleArgument);
     });
 
     it('should pipe', () => {
-      expect(pipe('sample-argument', uppercase, get3Chars, reverse)).toEqual('MAS');
-      expect(pipe('sample-argument', uppercase, reverse, get3Chars)).toEqual('TNE');
+      expect(pipe(sampleArgument, uppercase, get3Chars, reverse)).toEqual('MAS');
+      expect(pipe(sampleArgument, uppercase, reverse, get3Chars)).toEqual('TNE');
     });
   });
 
   describe('compose', () => {
-    it('should return result without any functions', () => {
-      expect(compose('sample-argument')).toEqual('sample-argument');
+    it('compose should return result without any functions', () => {
+      expect(compose(sampleArgument)).toEqual(sampleArgument);
     });
 
     it('should compose', () => {
-      expect(compose('sample-argument', uppercase, get3Chars, reverse)).toEqual('TNE');
-      expect(compose('sample-argument', uppercase, reverse, get3Chars)).toEqual('MAS');
+      expect(compose(sampleArgument, uppercase, get3Chars, reverse)).toEqual('TNE');
+      expect(compose(sampleArgument, uppercase, reverse, get3Chars)).toEqual('MAS');
     });
   });
 
   describe('cPipe', () => {
-    it('should return result without any functions', () => {
-      expect(cPipe()('sample-argument')).toEqual('sample-argument');
+    it('cPipe should return result without any functions', () => {
+      expect(cPipe()(sampleArgument)).toEqual(sampleArgument);
     });
 
     it('should pipe', () => {
-      expect(cPipe(uppercase, get3Chars, reverse)('sample-argument')).toEqual('MAS');
-      expect(cPipe(uppercase, reverse, get3Chars)('sample-argument')).toEqual('TNE');
+      expect(cPipe(uppercase, get3Chars, reverse)(sampleArgument)).toEqual('MAS');
+      expect(cPipe(uppercase, reverse, get3Chars)(sampleArgument)).toEqual('TNE');
     });
   });
 
   describe('cCompose', () => {
-    it('should return result without any functions', () => {
-      expect(cCompose()('sample-argument')).toEqual('sample-argument');
+    it('cCompose should return result without any functions', () => {
+      expect(cCompose()(sampleArgument)).toEqual(sampleArgument);
     });
 
     it('should compose', () => {
-      expect(cCompose(uppercase, get3Chars, reverse)('sample-argument')).toEqual('TNE');
-      expect(cCompose(uppercase, reverse, get3Chars)('sample-argument')).toEqual('MAS');
+      expect(cCompose(uppercase, get3Chars, reverse)(sampleArgument)).toEqual('TNE');
+      expect(cCompose(uppercase, reverse, get3Chars)(sampleArgument)).toEqual('MAS');
     });
   });
 
   describe('pPipe', () => {
-    it('should return value if no functions', async () => {
+    it('pPipe should return value if no functions', async () => {
       expect(await pPipe()(1)).toEqual(1);
     });
 
@@ -64,7 +65,7 @@ describe('index', () => {
   });
 
   describe('pCompose', () => {
-    it('should return value if no functions', async () => {
+    it('pCompose should return value if no functions', async () => {
       expect(await pCompose()(1)).toEqual(1);
     });
 
@@ -74,8 +75,8 @@ describe('index', () => {
   });
 
   it('pipe and compose', () => {
-    expect(compose('sample-argument', uppercase, get3Chars, reverse)).toEqual(
-      pipe('sample-argument', reverse, get3Chars, uppercase),
+    expect(compose(sampleArgument, uppercase, get3Chars, reverse)).toEqual(
+      pipe(sampleArgument, reverse, get3Chars, uppercase),
     );
   });
 });
