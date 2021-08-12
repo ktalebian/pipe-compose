@@ -1,4 +1,4 @@
-// tslint:disable
+/* eslint-disable prettier/prettier */
 export type PromiseFunction = (x: any) => Promise<any>;
 
 export const pipe = (x: any, ...fns: Function[]) => fns.reduce((v, f) => f(v), x);
