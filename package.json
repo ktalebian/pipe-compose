@@ -24,6 +24,8 @@
     "lint": "eslint --ext ts src/",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky install",
+    "prepublish:public": "npm run build",
+    "publish:public": "npm publish --access public",
     "test": "jest",
     "test:watch": "jest --watch"
   },
